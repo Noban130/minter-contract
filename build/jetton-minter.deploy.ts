@@ -15,9 +15,9 @@ const SNAKE_PREFIX = 0x00;
 // - Data is stored on-chain (except for the image data itself)
 // - Owner should usually be the deploying wallet's address.
 const jettonParams = {
-  owner: Address.parse("EQD4gS-Nj2Gjr2FYtg-s3fXUvjzKbzHGZ5_1Xe_V0-GCp0p2"),
-  name: "MyJetton",
-  symbol: "JET1",
+  owner: Address.parse("0QCKvH94i00mL197YiTXBqmglz6-8OM40WWuxzVrqBSE2AmT"),
+  name: "XRider",
+  symbol: "XRD",
   image: "https://www.linkpicture.com/q/download_183.png", // Image url
   description: "My jetton",
 };

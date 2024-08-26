@@ -33,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "@vercel/ncc": "^0.34.0",
+    "axios": "0.25.0",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "chai-bn": "^0.3.1",
@@ -47,8 +48,7 @@
     "ton-contract-executor": "^0.5.0",
     "ts-node": "^10.4.0",
     "ts-sinon": "^2.0.2",
-    "typescript": "^4.5.4",
-    "axios": "0.25.0"
+    "typescript": "^4.5.4"
   },
   "prettier": {
     "printWidth": 100
@@ -66,6 +66,7 @@
   "dependencies": {
     "@aws-crypto/sha256-js": "^2.0.1",
     "axios-request-throttle": "^1.0.0",
+    "blueprint": "^2.1.5",
     "dotenv": "^16.0.0",
     "semver": "^7.3.7",
     "ton": "^11.16.0",

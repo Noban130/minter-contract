@@ -33,6 +33,7 @@ async function main() {
       .match(/semantic version: v([0-9.]+)/)?.[1];
     if (!semver.gte(semver.coerce(funcVersion) ?? "", minSupportFunc)) throw new Error("Nonexistent version or outdated");
   } catch (e) {
+    console.log(`\nTo fix this issue, please run:\nchoco install func\n`);
     console.log(`\nFATAL ERROR: 'func' with version >= ${minSupportFunc} executable is not found, is it installed and in path?`);
     process.exit(1);
   }
@@ -41,7 +42,7 @@ async function main() {
   let fiftVersion = "";
   try {
     fiftVersion = child_process.execSync("fift -V").toString();
-  } catch (e) {}
+  } catch (e) { }
   if (!fiftVersion.includes("Fift build information")) {
     console.log("\nFATAL ERROR: 'fift' executable is not found, is it installed and in path?");
     process.exit(1);
@@ -102,7 +103,7 @@ async function main() {
     let buildErrors: string;
     try {
       buildErrors = child_process.execSync(`func -APS -o build/${contractName}.fif ${rootContract} 2>&1 1>node_modules/.tmpfunc`).toString();
-    } catch (e) {
+    } catch (e: any) {
       buildErrors = e.stdout.toString();
     }
     if (buildErrors.length > 0) {
